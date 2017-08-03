@@ -1,0 +1,169 @@
+\documentclass[11pt,twoside, a4paper]{report}
+\usepackage{amsmath,amssymb,amsthm,array,tikz,fancyhdr,pgfplots}
+\usepackage[all]{xy}
+\setcounter{tocdepth}{2}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[LE,LO]{\leftmark}
+%\fancyhead[RE,LO]{\rightmark}
+%\fancyfoot[CE,CO]{\leftmark}
+%\fancyfoot[LE,LO]{\thepage}
+\textwidth 130mm
+\textheight 220mm
+\hoffset 3.5cm
+\oddsidemargin -3.0cm
+\evensidemargin -3.0cm
+\topmargin -.5cm
+\linespread{1.2}
+
+
+
+\theoremstyle{plain}
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Proposition}{THEOREM}[Theorem]
+\newtheorem{Lemma}{Lemma}[Theorem]
+\newtheorem{corollary}{Corollary}[Theorem]
+
+
+\theoremstyle{definition}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{exmp}[Theorem]{Example}
+\newtheorem{obs}[Theorem]{Observation}
+\newtheorem{rmrk}[Theorem]{Remark}
+
+%QED - End of proof symbol 
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%Command Shortcuts
+\newcommand{\cl}{\textnormal{cl}} %Conjgacy Class.
+\newcommand{\C}{\textnormal{C}}   %Centralizer.
+\newcommand{\orb}{\textnormal{orb}} %Orbit of a point.
+\newcommand{\stab}{\textnormal{stab}} %Stablizer of a point.
+\newcommand{\Z}{\textnormal{Z}} %Center of a group.
+\newcommand{\GL}{\textnormal{GL}} %General Linear Group.
+\newcommand{\Ker}{\textnormal{ker}}%Kernel of a morphism.
+\newcommand{\Image}{\textnormal{im}}%Image of a morphism.
+\newcommand{\Coker}{\textnormal{coker}}%cokernel of a morphism.
+\newcommand{\Hom}{\textnormal{Hom}} %Homomorphism group.
+\newcommand{\End}{\textnormal{End}} %Homomorphisms from G to G.
+\newcommand{\otr}{\otimes_{R}}%Tensor product of a ring R.
+\newcommand{\otk}{\otimes_{K}}%Tensor product over a field K.
+\newcommand{\otf}{\otimes_{F}}%Tensor product over a field F.
+\newcommand{\ot}{\otimes}%Tensor product of elements .
+\newcommand{\Spec}{\textnormal{Spec}}%Spectrum of a ring.
+\newcommand{\MSpec}{\textnormal{MSpec}}%MaxSpectrum of a ring.
+\newcommand{\rad}{\textnormal{rad}}%Jacobson radical.
+\newcommand{\Tr}{\textnormal{Tr}}%Trace.
+\newcommand{\Det}{\textnormal{Det}}%Determinant.
+\newcommand{\dd}{\textnormal{d}}%Differential.
+\newcommand{\kahAR}{\Omega_{A/R}^{1}}%Kaehler 1-forms.
+\newcommand{\aff}{\mathbb{A}^{n}_{k}} %Affine n-space.
+\newcommand{\polyn}{k[X_{1}, X_{2}, \cdots , X_{n}]} %Polynomial ring in n variables.
+\newcommand{\Gal}{\textnormal{Gal}} %Galois group of E/F.
+\newcommand{\surhom}{\twoheadrightarrow}%Arrow representing surjective map.
+\newcommand{\Gel}{\textnormal{Gel}}%Gelfand Transformation .
+\newcommand{\injmor}{\hookrightarrow}%Injective morphism arrow.
+\newcommand{\surmor}{\twoheadrightarrow}%Surjective morphism arrow.
+\newcommand{\algintk}{\mathcal{O}_{K}}%Algebraic integers in K.
+\newcommand{\support}{\textnormal{Supp}}%Support of a section.
+\newcommand{\finetk}{{\bf FEt$_{k}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetks}{{\bf FEt$_{k_{sep}}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetr}{{\bf FEt$_{R}$}}% Category of FinteEtaleRAlgebras.
+\newcommand{\finets}{{\bf FEt$_{\bf Semi}$}}% Category of FinteEtaleSemiAlgebras.
+\newcommand{\fingset}{{\bf FinGset }}%Category of Finite G sets.
+\newcommand{\posreal}{\mathbb{R}_{+}}%Positive reals.
+\newcommand{\otpr}{\otimes_{\mathbb{R}_{+}}}%Tensor over positive reals.
+\newcommand{\bool}{\mathbb{B}}%Boolean semiring. 
+\newcommand{\Aut}{\textnormal{Aut}}%Automorphism
+\newcommand{\Inn}{\textnormal{Inn}}%InnerAutomorphism
+\newcommand{\ev}{\textnormal{ev}}%evaluation map of R-algebras
+
+
+
+
+
+
+
+\begin{document}
+
+\begin{center}
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}} 
+{\bf Algebra 1: Tutorial 6 }
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}}  
+ \noindent\makebox[\linewidth]{\rule{14cm}{3pt}}
+\end{center}
+
+\noindent When you answer these questions practise your proof writing.\\
+  {\bf Be clear, concise, and complete.}
+  
+  
+\begin{center}
+{\bf Question 1: Underlying Group Structures in Rings}
+\end{center}
+
+Pick your favourite group. Can you find a ``natural" ring structure on it? [Recall that a ring is a commutative group under addition with another operation, multiplication. So can you see a multiplication on your favourite group which induces a ring structure? Perhaps the group already has multiplication, in which case you need the additive structure.]
+
+
+  
+\begin{center}
+{\bf Question 2: Examples}
+\end{center}
+
+Give an example of 
+\begin{itemize} 
+
+\item a ring which is not a field, but has a non-trivial (not $\pm 1$) unit.
+\item a ring in which all non-zero elements are units. 
+\item an ideal of $\mathbb{Z}$. Is it principal?
+\item a ring with no zero divisors and only the trivial (not $\pm 1$) units.
+\end{itemize}
+  
+\begin{center}
+{\bf Question 3: Non-Commutative Example}
+\end{center}
+
+Some mathematicians prefer to relax the definition of a ring a little bit. Many do not require the \emph{multiplication} to be commutative. Can you give an example of such a \emph{non-commutative ring}?
+  
+\begin{center}
+{\bf Question 4: Kernels are Ideals}
+\end{center} 
+
+If $\phi: R \rightarrow R'$ is a ring homomorphism, prove $\ker(\phi)$ is an ideal of $R$.
+
+  
+\begin{center}
+{\bf Question 5: Homomorphisms Determined by Generators}
+\end{center}
+
+Give a homomorphism $\phi: \mathbb{R}[x] \rightarrow \mathbb{R}$ which fixes elements of $\mathbb{R}$. [This can be done by applying the \emph{substitution principle} with the identity map $i:\mathbb{R}\rightarrow \mathbb{R}$]
+
+  
+\begin{center}
+{\bf Question 6: Units and Trivial Ideals}
+\end{center}
+
+If $u\in I$ is a unit in an ideal $I\subseteq R$, what can you say about $I$?
+
+  
+\begin{center}
+{\bf Question 7: Primes Factor in Extensions}
+\end{center} 
+
+If $i = \sqrt{-1}$, show $\mathbb{Z}[i]:=\{ a + bi \ | \ a, b \in \mathbb{Z}\}$ is a ring with the standard multiplication of complex numbers. Can you factor 2 in $\mathbb{Z}[i]$?
+
+  
+\begin{center}
+{\bf Question 8: Zero Divisors }
+\end{center}
+
+For which $n$ does $\mathbb{Z}/n\mathbb{Z}$ contain zero-divisors? When is $\mathbb{Z}/n\mathbb{Z}$ a field?
+
+  
+\begin{center}
+{\bf Question 9: Ideal of Vanishing}
+\end{center}
+
+Let $a \in \mathbb{C}$ and define the set $I_{a}:= \{ f \in \mathbb{C}[x] \ | \ f(a) = 0 \} \subseteq \mathbb{C}[x]$. Prove $I_{a}$ is an ideal in $\mathbb{C}[x]$. Moreover, prove it is principal. 
+
+
+\end{document}

@@ -1,0 +1,173 @@
+\documentclass[11pt,twoside, a4paper]{report}
+\usepackage{amsmath,amssymb,amsthm,array,tikz,fancyhdr,pgfplots}
+\usepackage[all]{xy}
+\setcounter{tocdepth}{2}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[LE,LO]{\leftmark}
+%\fancyhead[RE,LO]{\rightmark}
+%\fancyfoot[CE,CO]{\leftmark}
+%\fancyfoot[LE,LO]{\thepage}
+\textwidth 130mm
+\textheight 220mm
+\hoffset 3.5cm
+\oddsidemargin -3.0cm
+\evensidemargin -3.0cm
+\topmargin -.5cm
+\linespread{1.2}
+
+
+
+\theoremstyle{plain}
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Proposition}{THEOREM}[Theorem]
+\newtheorem{Lemma}{Lemma}[Theorem]
+\newtheorem{corollary}{Corollary}[Theorem]
+
+
+\theoremstyle{definition}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{exmp}[Theorem]{Example}
+\newtheorem{obs}[Theorem]{Observation}
+\newtheorem{rmrk}[Theorem]{Remark}
+
+%QED - End of proof symbol 
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%Command Shortcuts
+\newcommand{\cl}{\textnormal{cl}} %Conjgacy Class.
+\newcommand{\C}{\textnormal{C}}   %Centralizer.
+\newcommand{\orb}{\textnormal{orb}} %Orbit of a point.
+\newcommand{\stab}{\textnormal{stab}} %Stablizer of a point.
+\newcommand{\Z}{\textnormal{Z}} %Center of a group.
+\newcommand{\GL}{\textnormal{GL}} %General Linear Group.
+\newcommand{\Ker}{\textnormal{ker}}%Kernel of a morphism.
+\newcommand{\Image}{\textnormal{im}}%Image of a morphism.
+\newcommand{\Coker}{\textnormal{coker}}%cokernel of a morphism.
+\newcommand{\Hom}{\textnormal{Hom}} %Homomorphism group.
+\newcommand{\End}{\textnormal{End}} %Homomorphisms from G to G.
+\newcommand{\otr}{\otimes_{R}}%Tensor product of a ring R.
+\newcommand{\otk}{\otimes_{K}}%Tensor product over a field K.
+\newcommand{\otf}{\otimes_{F}}%Tensor product over a field F.
+\newcommand{\ot}{\otimes}%Tensor product of elements .
+\newcommand{\Spec}{\textnormal{Spec}}%Spectrum of a ring.
+\newcommand{\MSpec}{\textnormal{MSpec}}%MaxSpectrum of a ring.
+\newcommand{\rad}{\textnormal{rad}}%Jacobson radical.
+\newcommand{\Tr}{\textnormal{Tr}}%Trace.
+\newcommand{\Det}{\textnormal{Det}}%Determinant.
+\newcommand{\dd}{\textnormal{d}}%Differential.
+\newcommand{\kahAR}{\Omega_{A/R}^{1}}%Kaehler 1-forms.
+\newcommand{\aff}{\mathbb{A}^{n}_{k}} %Affine n-space.
+\newcommand{\polyn}{k[X_{1}, X_{2}, \cdots , X_{n}]} %Polynomial ring in n variables.
+\newcommand{\Gal}{\textnormal{Gal}} %Galois group of E/F.
+\newcommand{\surhom}{\twoheadrightarrow}%Arrow representing surjective map.
+\newcommand{\Gel}{\textnormal{Gel}}%Gelfand Transformation .
+\newcommand{\injmor}{\hookrightarrow}%Injective morphism arrow.
+\newcommand{\surmor}{\twoheadrightarrow}%Surjective morphism arrow.
+\newcommand{\algintk}{\mathcal{O}_{K}}%Algebraic integers in K.
+\newcommand{\support}{\textnormal{Supp}}%Support of a section.
+\newcommand{\finetk}{{\bf FEt$_{k}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetks}{{\bf FEt$_{k_{sep}}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetr}{{\bf FEt$_{R}$}}% Category of FinteEtaleRAlgebras.
+\newcommand{\finets}{{\bf FEt$_{\bf Semi}$}}% Category of FinteEtaleSemiAlgebras.
+\newcommand{\fingset}{{\bf FinGset }}%Category of Finite G sets.
+\newcommand{\posreal}{\mathbb{R}_{+}}%Positive reals.
+\newcommand{\otpr}{\otimes_{\mathbb{R}_{+}}}%Tensor over positive reals.
+\newcommand{\bool}{\mathbb{B}}%Boolean semiring. 
+\newcommand{\Aut}{\textnormal{Aut}}%Automorphism
+\newcommand{\Inn}{\textnormal{Inn}}%InnerAutomorphism
+\newcommand{\ev}{\textnormal{ev}}%evaluation map of R-algebras
+
+
+
+
+
+
+
+\begin{document}
+
+\begin{center}
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}} 
+{\bf Algebra 1: Tutorial 1 }
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}}  
+ \noindent\makebox[\linewidth]{\rule{14cm}{3pt}}
+\end{center}
+
+\noindent When you answer these questions practise your proof writing.\\
+  {\bf Be clear, concise, and complete.}
+  
+  
+\begin{center}
+{\bf Question 1: Examples of Subgroups}
+\end{center}
+
+
+Which of the following $H$ are subgroups of the given group $G$: 
+
+\begin{itemize}
+\item[(a)] $G:= \mathbb{C}^{*}$ and $H:=\{ \pm 1, \pm i\}$ 
+
+\item[(b)] $G:= \mathbb{Z}$ and $H:=\mathbb{N}$
+
+\item[(c)] $G:=\textnormal{GL}_{2}(\mathbb{C})$ and $H:=\textnormal{SL}_{2}(\mathbb{C}):=\{A \in \textnormal{GL}_{2}(\mathbb{C}) \ | \ \det(A)=1 \}$
+
+\item[(d)] $G:= \mathbb{Z}$ and $H:=\{0\}$
+\end{itemize}
+
+\begin{center}
+{\bf Question 2: New Groups From Old}
+\end{center}
+
+%NOTE: Joan does not want topic from the future of the course in the tutorial; just let them think about the topics they're already introduced to. 
+
+Let $G_{1}$ and $G_{2}$ be groups. Show that there is a ``natural" group structure on the set theoretic product $G_{1}\times G_{2}$. If $|G_{1}|=n$ and $|G_{2}|=m$, what is $|G_{1}\times G_{2}|$?
+
+\begin{center}
+{\bf Question 3: Permutations}
+\end{center}
+
+
+Let $ \sigma = \bigl(\begin{smallmatrix}
+    1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+    2 & 4 & 7 & 3 & 1 & 6 & 5
+  \end{smallmatrix}\bigr)$ be a permutation on the set $\{1, \dots , 7\}$ 
+  
+  \begin{itemize}
+  \item[(a)] write $\sigma$ in cycle notation
+  \item[(b)] write $\sigma$ as composition of transpositions. What is sgn$(\sigma)$?
+  \end{itemize}
+
+
+\begin{center}
+{\bf Question 4: Classification of Subgroups of $\mathbb{Z}$}
+\end{center}
+
+Give an example of a subgroup of $\mathbb{Z}$. Is it cyclic? Can you list \emph{all} subgroups of $\mathbb{Z}$? Are they all cyclic?
+
+\begin{center}
+{\bf Question 5: Group Homomorphism Example}
+\end{center}
+
+What is a homomorphism of groups? What is an isomorphism? Find a homomorphism 
+$$\varphi: \mathbb{C}^{*} \rightarrow \textnormal{GL}_{2}(\mathbb{R})$$
+Is the homomorphism (a) injective? (b) surjective? (c) an isomorphism? [Hint: In order to construct a homomorphism, think about where $1$ and $i$ must be mapped to]
+
+\begin{center}
+{\bf Question 6: Cosets}
+\end{center}
+
+Let $H:=4\mathbb{Z} \subseteq \mathbb{Z}$ be a subgroup of integers. 
+
+\begin{itemize}
+\item[(a)] are 3 and 7 in the same coset? 
+\item[(b)] are 3 and 6 in the same coset?
+\item[(c)] are 0, 4 and 24 in the same coset?
+\end{itemize}
+
+%NOTE: Joan does not want topic from the future of the course in the tutorial; just let them think about the topics they're already introduced to. 
+
+
+%How might you construct an operation on the set of all cosets of a subgroup $H$ of $G$? That is to say, given 2 cosets, say, $3+4\mathbb{Z}$ and $0+4\mathbb{Z}$, how can you get another one? This will be covered more precisely in the lectures, but it is worth thinking about as it is a very important construction. 
+
+
+\end{document}

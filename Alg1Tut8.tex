@@ -1,0 +1,142 @@
+\documentclass[11pt,twoside, a4paper]{report}
+\usepackage{amsmath,amssymb,amsthm,array,tikz,fancyhdr,pgfplots}
+\usepackage[all]{xy}
+\setcounter{tocdepth}{2}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[LE,LO]{\leftmark}
+%\fancyhead[RE,LO]{\rightmark}
+%\fancyfoot[CE,CO]{\leftmark}
+%\fancyfoot[LE,LO]{\thepage}
+\textwidth 130mm
+\textheight 220mm
+\hoffset 3.5cm
+\oddsidemargin -3.0cm
+\evensidemargin -3.0cm
+\topmargin -.5 cm
+\linespread{1.2}
+
+
+
+\theoremstyle{plain}
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Proposition}{THEOREM}[Theorem]
+\newtheorem{Lemma}{Lemma}[Theorem]
+\newtheorem{corollary}{Corollary}[Theorem]
+
+
+\theoremstyle{definition}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{exmp}[Theorem]{Example}
+\newtheorem{obs}[Theorem]{Observation}
+\newtheorem{rmrk}[Theorem]{Remark}
+
+%QED - End of proof symbol 
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%Command Shortcuts
+\newcommand{\cl}{\textnormal{cl}} %Conjgacy Class.
+\newcommand{\C}{\textnormal{C}}   %Centralizer.
+\newcommand{\orb}{\textnormal{orb}} %Orbit of a point.
+\newcommand{\stab}{\textnormal{stab}} %Stablizer of a point.
+\newcommand{\Z}{\textnormal{Z}} %Center of a group.
+\newcommand{\GL}{\textnormal{GL}} %General Linear Group.
+\newcommand{\Ker}{\textnormal{ker}}%Kernel of a morphism.
+\newcommand{\Image}{\textnormal{im}}%Image of a morphism.
+\newcommand{\Coker}{\textnormal{coker}}%cokernel of a morphism.
+\newcommand{\Hom}{\textnormal{Hom}} %Homomorphism group.
+\newcommand{\End}{\textnormal{End}} %Homomorphisms from G to G.
+\newcommand{\otr}{\otimes_{R}}%Tensor product of a ring R.
+\newcommand{\otk}{\otimes_{K}}%Tensor product over a field K.
+\newcommand{\otf}{\otimes_{F}}%Tensor product over a field F.
+\newcommand{\ot}{\otimes}%Tensor product of elements .
+\newcommand{\Spec}{\textnormal{Spec}}%Spectrum of a ring.
+\newcommand{\MSpec}{\textnormal{MSpec}}%MaxSpectrum of a ring.
+\newcommand{\rad}{\textnormal{rad}}%Jacobson radical.
+\newcommand{\Tr}{\textnormal{Tr}}%Trace.
+\newcommand{\Det}{\textnormal{Det}}%Determinant.
+\newcommand{\dd}{\textnormal{d}}%Differential.
+\newcommand{\kahAR}{\Omega_{A/R}^{1}}%Kaehler 1-forms.
+\newcommand{\aff}{\mathbb{A}^{n}_{k}} %Affine n-space.
+\newcommand{\polyn}{k[X_{1}, X_{2}, \cdots , X_{n}]} %Polynomial ring in n variables.
+\newcommand{\Gal}{\textnormal{Gal}} %Galois group of E/F.
+\newcommand{\surhom}{\twoheadrightarrow}%Arrow representing surjective map.
+\newcommand{\Gel}{\textnormal{Gel}}%Gelfand Transformation .
+\newcommand{\injmor}{\hookrightarrow}%Injective morphism arrow.
+\newcommand{\surmor}{\twoheadrightarrow}%Surjective morphism arrow.
+\newcommand{\algintk}{\mathcal{O}_{K}}%Algebraic integers in K.
+\newcommand{\support}{\textnormal{Supp}}%Support of a section.
+\newcommand{\finetk}{{\bf FEt$_{k}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetks}{{\bf FEt$_{k_{sep}}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetr}{{\bf FEt$_{R}$}}% Category of FinteEtaleRAlgebras.
+\newcommand{\finets}{{\bf FEt$_{\bf Semi}$}}% Category of FinteEtaleSemiAlgebras.
+\newcommand{\fingset}{{\bf FinGset }}%Category of Finite G sets.
+\newcommand{\posreal}{\mathbb{R}_{+}}%Positive reals.
+\newcommand{\otpr}{\otimes_{\mathbb{R}_{+}}}%Tensor over positive reals.
+\newcommand{\bool}{\mathbb{B}}%Boolean semiring. 
+\newcommand{\Aut}{\textnormal{Aut}}%Automorphism
+\newcommand{\Inn}{\textnormal{Inn}}%InnerAutomorphism
+\newcommand{\ev}{\textnormal{ev}}%evaluation map of R-algebras
+
+
+
+
+
+
+
+\begin{document}
+
+\begin{center}
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}} 
+{\bf Algebra 1: Tutorial 8 }
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}}  
+ \noindent\makebox[\linewidth]{\rule{14cm}{3pt}}
+\end{center}
+
+\noindent When you answer these questions practise your proof writing.\\
+  {\bf Be clear, concise, and complete.}
+  
+  
+\begin{center}
+{\bf Question 1: Idempotents are Zero Divisors}
+\end{center}
+
+Recall that an idempotent of a ring $R$ is an element $e \in R$ such that $e^{2}=e$. The identities $0$ and $1$ of a ring are always idempotents, we call these \emph{trivial idempotents}. Prove all non-trivial idempotents in a ring $R$ are zero divisors. Prove that an integral domain can't be decomposed as a product of smaller rings. 
+
+
+
+\begin{center}
+{\bf Question 2: Idempotents Break Rings Up}
+\end{center} 
+
+If $A$ and $B$ are rings, then show $(a,b) \in A\times B$ is an idempotent if and only if $a$ and $b$ are idempotents in $A$ and $B$ respectively. Find all idempotents in (i) $\mathbb{R}^{2}$ (ii) $\mathbb{Z}/3\mathbb{Z} \times \mathbb{Z}/6\mathbb{Z}$ (iii) $\mathbb{Z}\times\mathbb{Q}$
+
+\begin{center}
+{\bf Question 3: Product Rings Example I}
+\end{center}
+
+Decompose $\mathbb{Z}/6\mathbb{Z}$ as a product of rings. Decompose $\mathbb{Z}/12\mathbb{Z}$ as a product of rings. 
+
+
+\begin{center}
+{\bf Question 4: Ideal of Vanishing are Maximal}
+\end{center}
+
+Recall the ideal $I_{a}:=\{ f \in \mathbb{C}[x] \ | \ f(a) = 0 \} = \langle x-a \rangle \subseteq \mathbb{C}[x]$ from the last few tutorials. Prove this ideal is a maximal ideal. 
+
+This proves there is a bijection between points of $\mathbb{C}$ and maximal ideals of $\mathbb{C}[x]$: this is the beginning point of algebraic geometry. 
+
+
+
+\begin{center}
+{\bf Question 5: Quotient Ring Examples I}
+\end{center} 
+
+Prove $f(x)=x^{2}-2$ is irreducible over $\mathbb{Q}$. As a consequence prove $\mathbb{Q}[x]/\langle x^{2}-2 \rangle$ is a field. Identify this field with a subfield of $\mathbb{R}$. Do the same with (i) $g(x)=x^{2} -3$ (ii) $h(x) = x^{3} - 2$. One can't always realise such quotient fields as subfields of $\mathbb{R}$: for example the quotient $\mathbb{Q}[x]/\langle  x^{2} + 1\rangle$ can't be imbedded into $\mathbb{R}$ --- why? --- instead, realise this as a subfield of $\mathbb{C}$. 
+
+Prove $\mathbb{Z}/3\mathbb{Z}[x]/\langle x^{2} + 1 \rangle$ is a field. How many elements does it have?
+
+
+
+
+\end{document}

@@ -1,0 +1,137 @@
+\documentclass[11pt,twoside, a4paper]{report}
+\usepackage{amsmath,amssymb,amsthm,array,tikz,fancyhdr,pgfplots}
+\usepackage[all]{xy}
+\setcounter{tocdepth}{2}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[LE,LO]{\leftmark}
+%\fancyhead[RE,LO]{\rightmark}
+%\fancyfoot[CE,CO]{\leftmark}
+%\fancyfoot[LE,LO]{\thepage}
+\textwidth 130mm
+\textheight 220mm
+\hoffset 3.5cm
+\oddsidemargin -3.0cm
+\evensidemargin -3.0cm
+\topmargin -.5cm
+\linespread{1.2}
+
+
+
+\theoremstyle{plain}
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Proposition}{THEOREM}[Theorem]
+\newtheorem{Lemma}{Lemma}[Theorem]
+\newtheorem{corollary}{Corollary}[Theorem]
+
+
+\theoremstyle{definition}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{exmp}[Theorem]{Example}
+\newtheorem{obs}[Theorem]{Observation}
+\newtheorem{rmrk}[Theorem]{Remark}
+
+%QED - End of proof symbol 
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%Command Shortcuts
+\newcommand{\cl}{\textnormal{cl}} %Conjgacy Class.
+\newcommand{\C}{\textnormal{C}}   %Centralizer.
+\newcommand{\orb}{\textnormal{orb}} %Orbit of a point.
+\newcommand{\stab}{\textnormal{stab}} %Stablizer of a point.
+\newcommand{\Z}{\textnormal{Z}} %Center of a group.
+\newcommand{\GL}{\textnormal{GL}} %General Linear Group.
+\newcommand{\Ker}{\textnormal{ker}}%Kernel of a morphism.
+\newcommand{\Image}{\textnormal{im}}%Image of a morphism.
+\newcommand{\Coker}{\textnormal{coker}}%cokernel of a morphism.
+\newcommand{\Hom}{\textnormal{Hom}} %Homomorphism group.
+\newcommand{\End}{\textnormal{End}} %Homomorphisms from G to G.
+\newcommand{\otr}{\otimes_{R}}%Tensor product of a ring R.
+\newcommand{\otk}{\otimes_{K}}%Tensor product over a field K.
+\newcommand{\otf}{\otimes_{F}}%Tensor product over a field F.
+\newcommand{\ot}{\otimes}%Tensor product of elements .
+\newcommand{\Spec}{\textnormal{Spec}}%Spectrum of a ring.
+\newcommand{\MSpec}{\textnormal{MSpec}}%MaxSpectrum of a ring.
+\newcommand{\rad}{\textnormal{rad}}%Jacobson radical.
+\newcommand{\Tr}{\textnormal{Tr}}%Trace.
+\newcommand{\Det}{\textnormal{Det}}%Determinant.
+\newcommand{\dd}{\textnormal{d}}%Differential.
+\newcommand{\kahAR}{\Omega_{A/R}^{1}}%Kaehler 1-forms.
+\newcommand{\aff}{\mathbb{A}^{n}_{k}} %Affine n-space.
+\newcommand{\polyn}{k[X_{1}, X_{2}, \cdots , X_{n}]} %Polynomial ring in n variables.
+\newcommand{\Gal}{\textnormal{Gal}} %Galois group of E/F.
+\newcommand{\surhom}{\twoheadrightarrow}%Arrow representing surjective map.
+\newcommand{\Gel}{\textnormal{Gel}}%Gelfand Transformation .
+\newcommand{\injmor}{\hookrightarrow}%Injective morphism arrow.
+\newcommand{\surmor}{\twoheadrightarrow}%Surjective morphism arrow.
+\newcommand{\algintk}{\mathcal{O}_{K}}%Algebraic integers in K.
+\newcommand{\support}{\textnormal{Supp}}%Support of a section.
+\newcommand{\finetk}{{\bf FEt$_{k}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetks}{{\bf FEt$_{k_{sep}}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetr}{{\bf FEt$_{R}$}}% Category of FinteEtaleRAlgebras.
+\newcommand{\finets}{{\bf FEt$_{\bf Semi}$}}% Category of FinteEtaleSemiAlgebras.
+\newcommand{\fingset}{{\bf FinGset }}%Category of Finite G sets.
+\newcommand{\posreal}{\mathbb{R}_{+}}%Positive reals.
+\newcommand{\otpr}{\otimes_{\mathbb{R}_{+}}}%Tensor over positive reals.
+\newcommand{\bool}{\mathbb{B}}%Boolean semiring. 
+\newcommand{\Aut}{\textnormal{Aut}}%Automorphism
+\newcommand{\Inn}{\textnormal{Inn}}%InnerAutomorphism
+\newcommand{\ev}{\textnormal{ev}}%evaluation map of R-algebras
+
+
+
+
+
+
+
+\begin{document}
+\begin{center}
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}} 
+{\bf Algebra 1: Tutorial 5 }
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}}  
+ \noindent\makebox[\linewidth]{\rule{14cm}{3pt}}
+\end{center}
+
+\noindent When you answer these questions practise your proof writing.\\
+  {\bf Be clear, concise, and complete.}
+  
+  
+\begin{center}
+{\bf Question 1: Cayley's Theorem}
+\end{center}
+
+Prove Cayley's Theorem: 
+
+\begin{center} 
+\emph{Every finite group is isomorphic to a subgroup of $S_{n}$, for some $n \in \mathbb{N}$}. 
+\end{center}
+
+
+\begin{center}
+{\bf Question 2: Automorphisms Define Groups Actions}
+\end{center}
+
+Suppose $G$ and $H$ are groups such that $H$ is isomorphic to a subgroup of $\Aut(G)$ i.e. $H \injmor \Aut(G)$. Define a group action of $H$ on $G$. 
+
+\begin{center}
+{\bf Question 3: Class Equation}
+\end{center}
+
+Let $G$ be a group. Prove conjugation by $g \in G$ defines an action of $G$ on itself. Use this to prove $|G|=\sum_{\textnormal{orbits}}|\cl(x)|$, where $\cl(x)$ denotes the conjugacy class of $x$ under the action. This is called the \emph{class equation} of $G$. This is just saying that a group action partitions the set on which it is acting: in this case the set is the group itself. 
+
+Suppose $G$ is a group of order 21 and contains an element $x$ such that $|\cl(x)|=3$. What is the order of $x$? [Hint: use the ``counting formula" and the fact that $x \in \Z(x)$]
+
+\begin{center}
+{\bf Question 4: Class Equation Example I}
+\end{center}
+
+Calculate the class equation of $\mathbb{Z}/4\mathbb{Z}$. What is the class equation of any finite Abelian group? 
+
+\begin{center}
+{\bf Question 5: Class Equation Example II}
+\end{center}
+
+Calculate the class equation of $S_{3}$. 
+
+
+\end{document}

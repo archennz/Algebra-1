@@ -1,0 +1,165 @@
+\documentclass[11pt,twoside, a4paper]{report}
+\usepackage{amsmath,amssymb,amsthm,array,tikz,fancyhdr,pgfplots}
+\usepackage[all]{xy}
+\setcounter{tocdepth}{2}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[LE,LO]{\leftmark}
+%\fancyhead[RE,LO]{\rightmark}
+%\fancyfoot[CE,CO]{\leftmark}
+%\fancyfoot[LE,LO]{\thepage}
+\textwidth 130mm
+\textheight 220mm
+\hoffset 3.5cm
+\oddsidemargin -3.0cm
+\evensidemargin -3.0cm
+\topmargin -.5 cm
+\linespread{1.2}
+
+
+
+\theoremstyle{plain}
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Proposition}{THEOREM}[Theorem]
+\newtheorem{Lemma}{Lemma}[Theorem]
+\newtheorem{corollary}{Corollary}[Theorem]
+
+
+\theoremstyle{definition}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{exmp}[Theorem]{Example}
+\newtheorem{obs}[Theorem]{Observation}
+\newtheorem{rmrk}[Theorem]{Remark}
+
+%QED - End of proof symbol 
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%Command Shortcuts
+\newcommand{\cl}{\textnormal{cl}} %Conjgacy Class.
+\newcommand{\C}{\textnormal{C}}   %Centralizer.
+\newcommand{\orb}{\textnormal{orb}} %Orbit of a point.
+\newcommand{\stab}{\textnormal{stab}} %Stablizer of a point.
+\newcommand{\Z}{\textnormal{Z}} %Center of a group.
+\newcommand{\GL}{\textnormal{GL}} %General Linear Group.
+\newcommand{\Ker}{\textnormal{ker}}%Kernel of a morphism.
+\newcommand{\Image}{\textnormal{im}}%Image of a morphism.
+\newcommand{\Coker}{\textnormal{coker}}%cokernel of a morphism.
+\newcommand{\Hom}{\textnormal{Hom}} %Homomorphism group.
+\newcommand{\End}{\textnormal{End}} %Homomorphisms from G to G.
+\newcommand{\otr}{\otimes_{R}}%Tensor product of a ring R.
+\newcommand{\otk}{\otimes_{K}}%Tensor product over a field K.
+\newcommand{\otf}{\otimes_{F}}%Tensor product over a field F.
+\newcommand{\ot}{\otimes}%Tensor product of elements .
+\newcommand{\Spec}{\textnormal{Spec}}%Spectrum of a ring.
+\newcommand{\MSpec}{\textnormal{MSpec}}%MaxSpectrum of a ring.
+\newcommand{\rad}{\textnormal{rad}}%Jacobson radical.
+\newcommand{\Tr}{\textnormal{Tr}}%Trace.
+\newcommand{\Det}{\textnormal{Det}}%Determinant.
+\newcommand{\dd}{\textnormal{d}}%Differential.
+\newcommand{\kahAR}{\Omega_{A/R}^{1}}%Kaehler 1-forms.
+\newcommand{\aff}{\mathbb{A}^{n}_{k}} %Affine n-space.
+\newcommand{\polyn}{k[X_{1}, X_{2}, \cdots , X_{n}]} %Polynomial ring in n variables.
+\newcommand{\Gal}{\textnormal{Gal}} %Galois group of E/F.
+\newcommand{\surhom}{\twoheadrightarrow}%Arrow representing surjective map.
+\newcommand{\Gel}{\textnormal{Gel}}%Gelfand Transformation .
+\newcommand{\injmor}{\hookrightarrow}%Injective morphism arrow.
+\newcommand{\surmor}{\twoheadrightarrow}%Surjective morphism arrow.
+\newcommand{\algintk}{\mathcal{O}_{K}}%Algebraic integers in K.
+\newcommand{\support}{\textnormal{Supp}}%Support of a section.
+\newcommand{\finetk}{{\bf FEt$_{k}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetks}{{\bf FEt$_{k_{sep}}$}}% Category of FinteEtalekAlgebras.
+\newcommand{\finetr}{{\bf FEt$_{R}$}}% Category of FinteEtaleRAlgebras.
+\newcommand{\finets}{{\bf FEt$_{\bf Semi}$}}% Category of FinteEtaleSemiAlgebras.
+\newcommand{\fingset}{{\bf FinGset }}%Category of Finite G sets.
+\newcommand{\posreal}{\mathbb{R}_{+}}%Positive reals.
+\newcommand{\otpr}{\otimes_{\mathbb{R}_{+}}}%Tensor over positive reals.
+\newcommand{\bool}{\mathbb{B}}%Boolean semiring. 
+\newcommand{\Aut}{\textnormal{Aut}}%Automorphism
+\newcommand{\Inn}{\textnormal{Inn}}%InnerAutomorphism
+\newcommand{\ev}{\textnormal{ev}}%evaluation map of R-algebras
+
+
+
+
+
+
+
+\begin{document}
+
+\begin{center}
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}} 
+{\bf Algebra 1: Tutorial 9 }
+ \noindent\makebox[\linewidth]{\rule{14cm}{1.5pt}}  
+ \noindent\makebox[\linewidth]{\rule{14cm}{3pt}}
+\end{center}
+
+\noindent When you answer these questions practise your proof writing.\\
+  {\bf Be clear, concise, and complete.}
+  
+  
+\begin{center}
+{\bf Question 1: Examples of Modules}
+\end{center}
+
+Give an example of a: 
+
+\begin{itemize}
+\item[$\cdot$] $\mathbb{Z}$-module
+\item[$\cdot$] $\mathbb{Z}/4\mathbb{Z}$-module
+\item[$\cdot$] sub-$\mathbb{Z}$-module of the $\mathbb{Z}$-module $\mathbb{Z}$
+\item[$\cdot$] $\mathbb{C}$-module
+\item[$\cdot$]  sub-$\mathbb{R}$-module of the $\mathbb{R}$-module $\mathbb{C}$.
+\item[$\cdot$] non-vector space free module. 
+
+\end{itemize}
+
+
+
+\begin{center}
+{\bf Question 2: Not All Modules are Free}
+\end{center} 
+
+While modules are the natural generalisation of vector spaces over fields to ``vector spaces" over general rings, some times our intuitions do \emph{not} carry over: 
+\begin{itemize} 
+\item[$\cdot$] Give a module without a basis i.e. a non-free module.
+\item[$\cdot$] Give a finite (as a set) module. 
+\end{itemize}
+
+
+\begin{center}
+{\bf Question 3: Torsion}
+\end{center}
+
+One of the interesting properties that general modules have which obstructs our intuitions from vector spaces (modules over fields) is \emph{torsion}: a non-trivial element $x \in M$ of an $R$-module $M$ is said to be a \emph{torsion element} if there exists a non-trivial element $r \in R$ such that $rm=0 \in M$. Give a module with non-trivial torsion.
+
+
+\begin{center}
+{\bf Question 4: Modules as Endomorphisms of Groups}
+\end{center}
+
+[Warning: non-commutative rings ahead] Prove that giving an $R$-module structure on $M$ is equivalent to defining a ring homomorphism $\varphi: R \rightarrow \textnormal{End}(M)$. The ring on the right is the \emph{endomorphism} ring of $M$, which is the (in general, non-commutative) ring of group homomorphisms from $M$ to itself. 
+
+\begin{center}
+{\bf Question 5: Modules in Number Theory}
+\end{center}
+
+The Abelian group $\mathbb{Z}[\sqrt{2}]:=\{ a + b \sqrt{2} \ | \ a,b \in \mathbb{Z}\}$ is a $\mathbb{Z}$ module. Prove it is free. What does it look like as a sub-set of the plane? These $\mathbb{Z}$-modules play an important part in algebraic number theory, and solving Diophantine equations. In particular their \emph{geometric} properties tell us a lot! 
+
+
+\begin{center}
+{\bf Question 6: Linear Algebra of Commutative Rings}
+\end{center}
+
+Diagonalise, into a matrix with integer entries, the following matrices, and determine the matrices which diagonalise them.
+$$A:= \left( \begin{array}{cc}
+3 & 1  \\
+-1 & 2  \\
+ \end{array} \right) $$
+ 
+$$B:= \left( \begin{array}{ccc}
+3 & 1 & -4 \\
+2 & -3 & 1 \\
+-4 & 6 & 2 \end{array} \right)$$
+
+
+\end{document}
