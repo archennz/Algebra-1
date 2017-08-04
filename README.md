@@ -29,9 +29,9 @@ These are the commands you need:
 
 Do this to save your latest changes to your computer:
 ```
-git commit -a
+git commit -a -m"a messsage about the commit"
 ```
-This will add all of your changes to a commit and ask you for a message describing your changes.
+This will add all of your changes to a commit and save the message in git describing your changes.
 The message is useful if you want to find some work that was deleted!
 
 If you have added a NEW file then you will need to tell git about it using
