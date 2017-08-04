@@ -34,6 +34,12 @@ git commit -a
 This will add all of your changes to a commit and ask you for a message describing your changes.
 The message is useful if you want to find some work that was deleted!
 
+If you have added a NEW file then you will need to tell git about it using
+```
+git add [NAME OF FILE]
+```
+Do this BEFORE you do `git commit`.
+
 ## Pushing changes
 
 Do this to update the online copy of the repository- so everyone can see your changes.
