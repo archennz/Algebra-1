@@ -1,6 +1,6 @@
 # Algebra-1
 Tutor worksheets for Algebra 1
-
+Evenually all the .tex files will just compile automagically!
 # Using git
 
 Copy the online repository to your computer
