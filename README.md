@@ -2,6 +2,9 @@
 Tutor worksheets for Algebra 1
 Evenually all the .tex files will just compile automagically!
 # Using git
+You need to use the terminal for the following, use ls and cd to move to the folder you have saved the directory on, see 
+https://www.davidbaumgold.com/tutorials/command-line/ moving around the computer section for a tutorial on the command line: 
+
 
 Copy the online repository to your computer
 ```
@@ -9,12 +12,6 @@ git clone https://github.com/bookbugdonald/Algebra-1
 ```
 This will let you edit the files and make commits 
 (i.e. save your work online).
-
-Edit something then type
-```
-git status
-```
-The name of the file you edited will show up RED, this means you have unsaved changes.
 
 When you are working on an EXISTING repository you can save a lot of pain by always refreshing your local copy using
 ```
@@ -33,6 +30,13 @@ git commit -a -m"a messsage about the commit"
 ```
 This will add all of your changes to a commit and save the message in git describing your changes.
 The message is useful if you want to find some work that was deleted!
+
+Detecting changed files:
+```
+git status
+```
+The name of the file you edited will show up RED, this means you have unsaved changes.
+
 
 If you have added a NEW file then you will need to tell git about it using
 ```
