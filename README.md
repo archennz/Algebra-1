@@ -1,7 +1,42 @@
 # Algebra-1
-Tutor worksheets for Algebra 1
-Evenually all the .tex files will just compile automagically!
+Tutor worksheets for Algebra 1. Acknowledgements to Robert Culling for the Algebra 1 worksheets from a previous year, which these worksheets are heavily based on.
+
+## Lecture plan
+The lecture plan (from Wattle, current as of 6 August) is as follows:
+
+Week 1. Laws of Composition, Groups, Subgroups
+
+Week 2. Examples of Groups, Homomorphisms & Isomorphisms
+
+Week 3. Homomorphisms & Isomorphisms, Equivalence Relations, Cosets, Modular Arithmetic
+
+Week 4. The Correspondence Theorem, Product Groups
+
+Week 5. Quotient Groups, generators and relations
+
+Week 6. Abstract symmetry, Operation on cosets, Counting formula
+
+Week 7. Class Equation, actions by quotient groups
+
+Week 8. Rings, Homormorphisms, & Ideals
+
+Week 9. Quotient Rings, Adjoining Elements
+
+Week 10. Product Rings, Fraction Fields, Maximal Ideals
+
+Week 11. Modules, Free Modules, Diagonalising Integer Matrices
+
+Week 12. Generators and Relations, Structure of Abelian Groups
+
+# Using GitHub
+
+A .zip file of the contents can be downloaded by clicking the green button "Clone or download". TeX files can be edited directly by selecting the relevant file, or via software called git.
+
+Hopefully all the .tex files will just compile automagically!
+
 # Using git
+A good source on installing and configuring git is https://help.github.com/articles/set-up-git/
+
 You need to use the terminal for the following, use ls and cd to move to the folder you have saved the directory on, see 
 https://www.davidbaumgold.com/tutorials/command-line/ moving around the computer section for a tutorial on the command line: 
 
