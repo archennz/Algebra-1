@@ -2,7 +2,7 @@
 Tutor worksheets for Algebra 1. Acknowledgements to Robert Culling for the Algebra 1 worksheets from a previous year, which these worksheets are heavily based on.
 
 ## Lecture plan
-The lecture plan (from Wattle, current as of 6 August) is as follows:
+The (core) lecture times are Monday 3pm, Tuesday 10am and Thursday 1pm. The lecture plan (from Wattle, current as of 8 August) is as follows:
 
 Week 1. Laws of Composition, Groups, Subgroups
 
