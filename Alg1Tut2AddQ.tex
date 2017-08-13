@@ -1,0 +1,173 @@
+ 
+\documentclass[12pt]{article}
+\usepackage{amsmath, amsthm,  amsfonts}
+\usepackage{url}
+\input xypic
+\xyoption{all}
+
+
+
+
+\hoffset -25truemm
+\oddsidemargin=25truemm
+   %\evensidemargin=25truemm
+\textwidth=157truemm
+\voffset -25truemm
+\topmargin=30truemm
+\headheight=0truemm
+\headsep=0truemm
+\textheight=235truemm
+
+\renewcommand{\baselinestretch}{1.2}
+  
+  \theoremstyle{plain}
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{question}[theorem]{Question}
+  \newtheorem{corollary}{Corollary}[section]
+
+  
+  \newtheorem{definition}[theorem]{Definition}
+
+  
+  \newtheorem{remark}[theorem]{Remark}
+  \newtheorem{example}{Example}[section]
+  \newtheorem{note}{Note}[section]
+  \newtheorem{exercise}{Exercise}[section]
+
+
+  \numberwithin{equation}{section}
+  \numberwithin{figure}{section}
+
+
+  % ------------------------------------------------------------------------
+
+  % caligraphic
+  \renewcommand{\cH}{{\mathcal H}}
+  \newcommand{\cQ}{{\mathcal Q}}
+  \newcommand{\cA}{{\mathcal A}}
+  \newcommand{\cE}{{\mathcal E}}
+  \newcommand{\cM}{{\mathcal M}}
+  \renewcommand{\cL}{{\mathcal L}}
+  \renewcommand{\cD}{{\mathcal D}}
+  \newcommand{\cI}{{\mathcal I}}
+  \newcommand{\cP}{{\mathcal P}}
+  \newcommand{\cC}{{\mathcal C}}
+  \newcommand{\cG}{{\mathcal G }}
+  \newcommand{\cO}{{\mathcal O }}
+  \newcommand{\cT}{{\mathcal T }}
+  \newcommand{\cK}{{\mathcal K }}
+  \newcommand{\GG}{{\mathfrak G}}
+  \newcommand{\cB}{\mathcal{B}}
+
+   \newcommand{\sta}{\stackrel}
+   \newcommand{\ba}{\begin{eqnarray}}
+   \newcommand{\na}{\end{eqnarray}}
+   \newcommand{\ban}{\begin{eqnarray*}}
+   \newcommand{\nan}{\end{eqnarray*}}
+
+  %fraktur
+  \newcommand{\g}{{\mathfrak g}}
+
+  % math blackboard
+  \newcommand{\C}{{\mathbb C}}
+  \newcommand{\R}{{\mathbb R}}
+  \newcommand{\Z}{{\mathbb Z}}
+   \newcommand{\Q}{{\mathbb Q}}
+   \newcommand{\I}{\mathbb{I}}
+      \newcommand{\N}{{\mathbb N}}
+ % \renewcommand{\A}{{\mathbb A}}
+
+  % greek
+  \renewcommand{\a}{\alpha}
+  \renewcommand{\b}{\beta}
+  \renewcommand{\c}{\gamma}
+  \newcommand{\eps}{\epsilon}
+  \renewcommand{\d}{\delta}
+  \newcommand{\sub}{\subset}
+  % miscellaneous
+
+
+    \newcommand{\disp}{\displaystyle}
+
+ 
+\def\cancel#1#2{\ooalign{$\hfil#1\mkern1mu/\hfil$\crcr$#1#2$}} 
+\def\Dirac{\mathpalette\cancel D} 
+\def\dirac{\mathpalette\cancel\partial} 
+ 
+  
+
+  \newcommand{\norm}[1]{\lVert {#1} \rVert}
+  \newcommand{\RP}{\RR {\rm P}}
+  \newcommand{\mar}[1]{{\marginpar{\textsf{#1}}}}
+  \newcommand{\cstar}{\C^*}
+
+
+  \newcommand{\<}{\langle}
+  \renewcommand{\>}{\rangle}
+
+
+  \renewcommand{\note}[1]{
+  \medskip
+  \noindent{\bf Author note:} #1
+  \medskip
+  }
+
+\begin{document}
+
+\noindent{Mathematical Sciences Institute \hspace{4.2cm} Name: \\
+MATH2322/3104/6118: Algebra 1}  \hspace{3.8cm} Uni Id: 
+
+\vspace{10mm}
+
+
+
+
+
+\centerline{\bf {\Large  
+Week 4 Algebra 1 Tutorial Add-on Questions} }
+
+
+\vspace{10mm}
+
+ %{\bf Please hand in Solutions by  5pm,  Friday, March 18}
+\vspace{5mm}
+
+ \noindent{\bf Exercise 1:}      
+    Show that the canonical homomorphism
+$\Z \rightarrow \Z / 5\Z$ does not preserves order of elements.\\
+
+ \noindent{\bf Exercise 2:}  Suppose $\phi;G \rightarrow G'$ is a group homomorphism. 
+ 	Show that, for all $g \in G$, the order of $\phi(g)$ divides the order of $g$. 
+ 	Furthermore, prove that they are equal if $ \phi$ is injective.\\
+
+
+ \noindent{\bf Exercise 3:} Prove that in any group, $ab$ is conjugate to $ba$.\\
+
+ \noindent{\bf Exercise 4:} Prove that every subgroup of an abelian group is a normal subgroup.\\
+ 
+ \noindent{\bf Exercise 5:} Show that if $A$ is a subgroup of $G$ and $B$ is a normal subgroup, then $AB = \{x \ | \ x =ab \ \text{for} \ a \in A, b \in B \}$ is a subgroup of $G$.\\
+ 
+ \noindent{\bf Exercise 6:} An index 2 subgroup of a group is normal. (Third way to prove $A_n$ is normal!)\\
+
+\noindent{\bf Exercise 7:} Show that if a group $G$ has just one subgroup $H$, then $H$ is normal.\\
+
+ 
+ \noindent{\bf Exercise 8:} Show that any group of order 125 has a subgroup of order 5.\\
+ 
+  \noindent{\bf Exercise 9:} Suppose $|G| = 25$. 
+  If $G$ has only a subgroup of order 5, then $G$ is cyclic. \\
+  
+   \noindent{\bf Exercise 10:} Suppose $|G| = 55$. 
+   Show that $G$ must have an element of order 5. \\
+  
+   \noindent{\bf Exercise 11:} Prove that every group of order $35$ has elements of order 5 and order 7.\\
+   
+   \noindent {\bf Exercise 12:} Prove that a group of even order must possesses at least one element of order 2.
+  
+ 
+
+
+\end{document}
+
