@@ -98,16 +98,13 @@
   
   
 \begin{center}
-{\bf Question 1: Quaternions}
+{\bf Question 1: Complex Number}
 \end{center}
 
-Let $G:=\{\pm 1, \pm i, \pm j, \pm k\}$ denote the \emph{quaternionic group}. The operations of $G$ are defined by the following relations: $i^{2}=j^{2}=k^{2}=-1$, $ij=-ji=k$, $jk=-kj=i$ and $ki=-ik=j$. Note: the group is \emph{not} commutative. 
-\begin{itemize}
-\item[a)] Prove $G$ is in fact a group! Write out the Cayley table.
-\item[b)] Express $G$ in generator and relation form. 
-\item[c)] Prove $H:=\{\pm 1\}$ is a normal subgroup of $G$.
-\item[d)] Use the Cayley table, or other means, to determine the group structure of $G/H$. 
-\end{itemize} 
+Let $H = \{ \pm 1, \ \pm i \}$ be the subgroup of $G$ = $\mathbb{C}^\times$ of fourth roots of unity. 
+	Describe the costes of $H$ in $G$ explicitly. 
+	Is $G/H$ isomorphic to $G$?
+	
 
 
   
@@ -118,28 +115,45 @@ Let $G:=\{\pm 1, \pm i, \pm j, \pm k\}$ denote the \emph{quaternionic group}. Th
 Let $S^{1}:=\{z \in \mathbb{C} \ | \ |z|=1\}$, and consider the group structure on $S^{1}$ induced by multiplication of complex numbers. Prove $\mathbb{R}/\mathbb{Z} \cong S^{1}$. [Hint: use the first isomorphism theorem of groups]
 
   
+  
+  
 \begin{center}
 {\bf Question 3: Roots of Unity}
 \end{center}
 
 Consider the polynomial $f(x)=x^{n} - 1$. Prove that the collection of roots of $f(x)$ in $\mathbb{C}$ forms a group under multiplication of complex numbers, denote it $\mu_{n}$. Consider the special case $n=4$. Prove $\mu_{4}$ is cyclic: can you prove $\mu_{n}$ is cyclic for all $n$? Prove $H:=\{\pm 1\}$ is a normal subgroup of $\mu_{4}$. Prove $\mu_{4}/H\cong \mathbb{Z}/2\mathbb{Z}$. Note: $\mu_{n}$ is a finite subgroup of the infinite group $S^{1}$ for each $n$. 
 
-  
 \begin{center}
-{\bf Question 4: Generators and Relations I}
+{\bf Question 4: Product of infinite cyclic groups}
 \end{center}
 
-Let $G:=\langle a,b \ | \ a^{3}=e, b^{2}=e, aba^{-1}b^{-1}=e \rangle$. To what familiar group is $G$ isomorphic to? What does the final relation tell us about $G$? 
 
-  
+Show, by counterexample, that the product of two infinite cyclic groups is not infinitely cyclic.
+
+
 \begin{center}
-{\bf Question 5: Generators and Relations II}
+{\bf Revision Exercises}
 \end{center}
 
-Let $G:=\langle a,b \ | \ a^{2}=e=b^{2}, aba=bab \rangle$. Show $G \cong S_{3}$. 
 
 
+ \noindent{\bf Exercise 1:}  Suppose $\phi;G \rightarrow G'$ is a group homomorphism. 
+ 	Show that, for all $g \in G$, the order of $\phi(g)$ divides the order of $g$. 
+ 	Furthermore, prove that they are equal if $ \phi$ is injective.\\
 
 
+ 
+ \noindent{\bf Exercise 2:} Show that if $A$ is a subgroup of $G$ and $B$ is a normal subgroup, then $AB = \{x \ | \ x =ab \ \text{for} \ a \in A, b \in B \}$ is a subgroup of $G$.\\
+ 
+ \noindent{\bf Exercise 3:} An index 2 subgroup of a group is normal. (Third way to prove $A_n$ is normal!)\\
+ 
+%\begin{center}
+%{\bf Order Matters!}
+%\end{center} 
+ 
+ 
+   %\noindent{\bf Exercise 7:} Prove that every group of order $35$ has elements of order 5 and order 7.\\
+   
+   %\noindent {\bf Exercise 8:} Prove that a group of even order must possesses at least one element of order 2.
 
 \end{document}
