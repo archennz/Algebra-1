@@ -16,7 +16,7 @@
 \topmargin -.5 cm
 \linespread{1.2}
 
-
+\pagestyle{empty}
 
 \theoremstyle{plain}
 \newtheorem{Theorem}{Theorem}[section]
@@ -96,16 +96,26 @@
 \noindent When you answer these questions practise your proof writing.\\
   {\bf Be clear, concise, and complete.}
   
-  
+
+% This ring is not commutative, and in Algebra 1, we assume all rings are commutative.
 \begin{center}
-{\bf Question 0: The Frobenius}
+{\bf Question 1: Matrix Ring Example}
 \end{center}
 
-Prove $x\mapsto x^{5}$ is a homomorphism from $\mathbb{Z}/5\mathbb{Z}$ to itself. In fact, this is true for \emph{any} prime. It is called the \emph{Frobenius map}.
+Denote $M_{n}(\mathbb{Z})$ to be the ring of matrices with integer entries. Note that it is non-commutative when $n>1$. Prove the matrices with \emph{even} entries form an two-sided ideal. Identify the quotient of $M_{n}(\mathbb{Z})$ by this ideal. Is the quotient still a non-commutative ring in this case?
+
 
 
 \begin{center}
-{\bf Question 1: Simplification of Presentations}
+{\bf Question 2: Automorphisms of a Polynomial Ring}
+\end{center}
+
+Determine the automorphisms of $\mathbb{Z}[x]$ [Hint: Recall that the integers are fixed by any such map (substitution principle), so such a morphism is determined by a single piece of information]. 
+
+
+
+\begin{center}
+{\bf Question 3: Simplification of Presentations}
 \end{center} 
 
 Identify (simplify the presentation of) each of the following rings: 
@@ -114,40 +124,33 @@ $\mathbb{Q}[x,y] / \langle y-x^{3},x-3 \rangle $; \
 $\mathbb{Q}[x,y] / \langle y-x^{2},x^{2}+1 \rangle.$ Be specific about the isomorphism used at each stage of your simplification.
 
 
-\begin{center}
-{\bf Question 2: Matrix Ring Example}
-\end{center}
 
-Denote $M_{n}(\mathbb{Z})$ to be the ring of matrices with integer entries. Prove the matrices with \emph{even} entries form an ideal. Identify the quotient of $M_{n}(\mathbb{Z})$ by this ideal. 
 
 \begin{center}
-{\bf Question 3: Generators of Rings}
+{\bf Question 4: Generators of Rings}
 \end{center}
 
 Find a $\mathbb{Z}$-basis for the ring $\mathbb{Z}[x]/\langle f \rangle$, when $f$ is: $f(x)= x^{2} + 1$, 
 $f(x)= x^{2} - 2$,
 $f(x)= x - 4$, and
-$f(x)= x^{4} - 1$
+$f(x)= x^{4} - 1$.
 
 
 
 \begin{center}
-{\bf Question 4: Adjoining Inverses of Zero Divisors}
+{\bf Question 5: Adjoining Inverses of Zero Divisors}
 \end{center}
 
-[Artin Exercise 11.5.3] Describe the ring obtained by adjoining an inverse of 2 to the ring $\mathbb{Z}/12\mathbb{Z}$ [Hint: $\langle 12, 2x - 1 \rangle = \langle 3, x+1 \rangle$ in $\mathbb{Z}[x]$] 
+[Artin Exercise 11.5.3] Describe the ring obtained by adjoining an inverse of 2 to the ring $\mathbb{Z}/12\mathbb{Z}$ \;[Hint: $\langle 12, 2x - 1 \rangle = \langle 3, x+1 \rangle$ in $\mathbb{Z}[x]$].
+
 
 \begin{center}
-{\bf Question 5: Function Algebras}
+{\bf Question 6: Function Algebras}
 \end{center}
 
-$I_{a}:= \{ f \in \mathbb{C}[x] \ | \ f(a) = 0 \} = \langle x-a \rangle \subseteq \mathbb{C}[x]$. Determine the quotient $\mathbb{C}[x]/I_{a}$.
+Let $I_{a}:= \{ f \in \mathbb{C}[x] \ | \ f(a) = 0 \} = \langle x-a \rangle \subseteq \mathbb{C}[x]$. Determine the quotient $\mathbb{C}[x]/I_{a}$.
 
-\begin{center}
-{\bf Question 6: Automorphisms of Polynomial Ring}
-\end{center}
 
-Determine the automorphisms of $\mathbb{Z}[x]$ [Hint: Recall that the integers are fixed by any such map (substitution principal) so such a morphism is determined by 1 piece of information] 
 
 
 
